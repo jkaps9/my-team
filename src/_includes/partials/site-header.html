@@ -1,17 +1,17 @@
 <header>
   <div class="container">
     <div class="navbar">
-      <a
-        href="{{ '/' | url }}"
-        class="logo"
-        aria-label="{{ site.name }} - home"
-      >
-        {% include "svgs/logo.svg" %}
-      </a>
       <nav
         class="main-nav"
         aria-label="main"
       >
+        <a
+          href="{{ '/' | url }}"
+          class="logo"
+          aria-label="{{ site.name }} - home"
+        >
+          {% include "svgs/logo.svg" %}
+        </a>
         <ul class="nav__list">
           {% for item in site.navigation %}
             <li class="nav__item">
@@ -19,13 +19,13 @@
             </li>
           {% endfor %}
         </ul>
-        <a
-          href="#"
-          class="btn"
-        >
-          Contact Us
-        </a>
       </nav>
+      <a
+        href="#"
+        class="btn"
+      >
+        Contact Us
+      </a>
       <button class="nav-toggle">
         {% include "svgs/icon-hamburger.svg" %}
         {% include "svgs/icon-close.svg" %}

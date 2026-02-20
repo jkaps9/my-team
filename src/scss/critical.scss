@@ -112,7 +112,7 @@ header {
   }
 
   .logo {
-    max-height: 4rem;
+    max-height: 2.5rem;
     color: var(--primary-color);
     text-decoration: none;
     display: flex;
@@ -120,7 +120,7 @@ header {
     gap: 1rem;
 
     svg {
-      height: 4rem;
+      height: 2rem;
       width: auto;
     }
   }
@@ -255,18 +255,27 @@ footer {
       position: relative;
       display: flex;
       align-items: center;
-      gap: clamp(1.875rem, -0.3393rem + 4.6131vw, 3.8125rem);
+      gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
     }
 
     .nav__list {
       display: flex;
-      gap: clamp(1.25rem, 0.3929rem + 1.7857vw, 2rem);
+      gap: 2.5rem;
+      margin-right: auto;
     }
 
     .nav__item {
       a {
         color: var(--text-color);
       }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  header {
+    .logo svg {
+      height: 2.5rem;
     }
   }
 }
