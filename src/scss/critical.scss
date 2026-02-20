@@ -253,39 +253,6 @@ footer {
   }
 }
 
-.services {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    place-items: center;
-    gap: clamp(1rem, 0.2958rem + 3.0047vw, 3rem);
-  }
-
-  &__card {
-    background-color: var(--card-bg);
-    border-radius: 1rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    color: var(--text-color);
-    padding: var(--card-padding);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  &__icon {
-    max-width: 3rem;
-    svg {
-      max-width: 100%;
-      height: auto;
-
-      & * {
-        fill: var(--text-secondary);
-      }
-    }
-  }
-}
-
 @media (min-width: 48rem) {
   header {
     .nav-toggle {
