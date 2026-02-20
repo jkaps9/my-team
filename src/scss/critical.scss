@@ -4,17 +4,31 @@
 
 :root {
   // COLORS
-  --primary-color: #1e3a8a;
+  --neautral-950: #000000;
+  --neutral-50: #fafafa;
+  --neutral-0: #ffffff;
+
+  --teal-950: #002529;
+  --teal-900: #012f34;
+  --teal-850: #004047;
+  --teal-800: #014e56;
+  --teal-700: #2c6269;
+  --teal-400: #79c8c7;
+
+  --rose-500: #ff7f7f;
+  --cyan-100: #c4fffe;
+
+  --primary-color: var(--teal-950);
   --primary-hover: #1e40af;
 
-  --accent-color: #84cc16;
+  --accent-color: var(--rose-500);
   --accent-hover: #65a30d;
 
-  --bg-color: #f1f1f1;
+  --bg-color: var(--primary-color);
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
 
-  --text-color: #333;
+  --text-color: var(--neutral-0);
   --text-secondary: #555;
   --text-muted: #666;
 
@@ -59,11 +73,11 @@ p {
   color: var(--accent-color);
 }
 
-.btn--primary {
+.btn {
   display: inline-block;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   text-decoration: none;
-  background-color: var(--accent-color);
+
   color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 700;
@@ -71,6 +85,11 @@ p {
 
   &:hover {
     background-color: var(--accent-hover);
+  }
+
+  &--light {
+  }
+  &--dark {
   }
 }
 
