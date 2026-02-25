@@ -20,51 +20,64 @@
     </div>
     <form id="contact-form">
       <div class="form-group">
-        <label for="full-name">Name</label>
         <input
           type="text"
           id="full-name"
           name="full-name"
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
+          placeholder="Name"
           required
         />
         <div class="error-message">This field is required</div>
       </div>
 
       <div class="form-group">
-        <label for="email">Email Address</label>
         <input
           type="email"
           id="email"
           name="email"
           oninvalid="this.setCustomValidity('Please enter a valid email address')"
           oninput="this.setCustomValidity('')"
+          placeholder="Email Address"
           required
         />
         <div class="error-message">This field is required</div>
       </div>
 
       <div class="form-group">
-        <label for="company">Company Name</label>
         <input
           type="text"
           id="company"
           name="company"
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
+          placeholder="Company Name"
           required
         />
         <div class="error-message">This field is required</div>
       </div>
 
       <div class="form-group">
-        <label for="message">Message</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          oninvalid="this.setCustomValidity('This field is required')"
+          oninput="this.setCustomValidity('')"
+          placeholder="Title"
+          required
+        />
+        <div class="error-message">This field is required</div>
+      </div>
+
+      <div class="form-group">
         <textarea
           name="message"
           id="message"
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
+          placeholder="Message"
           required
         ></textarea>
         <div class="error-message">This field is required</div>
