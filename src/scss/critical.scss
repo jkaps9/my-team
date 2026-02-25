@@ -227,7 +227,7 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: clamp(3rem, 3.9808rem + -2.0513vw, 3.5rem);
 
     li img {
       height: 1.5rem;
@@ -272,6 +272,21 @@ footer {
       }
     }
   }
+
+  .clients {
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+      li img {
+        height: 1rem;
+      }
+
+      li:last-child img {
+        height: 1.75rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 64rem) {
@@ -284,6 +299,18 @@ footer {
   .hero {
     &__content {
       @include fonts.textpreset6semibold;
+    }
+  }
+
+  .clients {
+    &__list {
+      li img {
+        height: 2.25rem;
+      }
+
+      li:last-child img {
+        height: 2.75rem;
+      }
     }
   }
 }
