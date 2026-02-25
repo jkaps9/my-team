@@ -222,6 +222,24 @@ footer {
   }
 }
 
+.clients {
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    li img {
+      height: 1.5rem;
+      width: auto;
+    }
+
+    li:last-child img {
+      height: 2.5rem;
+    }
+  }
+}
+
 @media (min-width: 48rem) {
   header {
     .nav-toggle {
