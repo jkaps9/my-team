@@ -5,7 +5,9 @@
     </h2>
     <div class="testimonials__list">
       {% for testimonial in site.testimonials %}
-        <p class="testimonials__text">{{ testimonial.text }}</p>
+        <blockquote>
+          <p class="testimonials__text">"{{ testimonial.text }}"</p>
+        </blockquote>
         <div class="testimonials__author">
           <p class="author__name">{{ testimonial.author.name }}</p>
           <p class="author__title">{{ testimonial.author.title }}</p>
