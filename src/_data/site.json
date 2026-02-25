@@ -10,6 +10,15 @@
       "url": "/about/"
     }
   ],
+  "contact": {
+    "address": {
+      "street1": "987  Hillcrest Lane",
+      "city": "Irvine",
+      "state": "CA",
+      "postal_code": "California 92714"
+    },
+    "phone": "949-833-7432"
+  },
   "testimonials": [
     {
       "text": "“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”",
