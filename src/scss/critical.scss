@@ -18,7 +18,10 @@
   --rose-500: #ff7f7f;
   --cyan-100: #c4fffe;
 
-  --primary-color: var(--teal-950);
+  --primary-color: var(--teal-800);
+  --primary-color-dark: var(--teal-850);
+  --primary-color-darker: var(--teal-900);
+  --primary-color-very-dark: var(--teal-950);
 
   --accent-color: var(--rose-500);
 
@@ -38,6 +41,7 @@
 
 //****** COMPONENTS ****** //
 .btn {
+  background-color: transparent;
   border: 2px solid var(--border-color);
   border-radius: 100vw;
   color: var(--text-color);
@@ -55,12 +59,11 @@
   }
 
   &--outline {
-    background: var(--text-color);
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--primary-color-darker);
+    color: var(--primary-color-darker);
 
     &:hover {
-      background: var(--primary-color);
+      background-color: var(--primary-color-darker);
       color: var(--text-color);
     }
   }
