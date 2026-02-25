@@ -274,6 +274,12 @@ footer {
     &:hover {
       outline: none;
     }
+
+    &::placeholder {
+      color: inherit;
+      font: inherit;
+      opacity: 0.6;
+    }
   }
 
   textarea {
