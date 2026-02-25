@@ -1,5 +1,25 @@
 <section class="directors">
   <div class="container directors__container">
     <h2 class="directors__title">Meet the directors</h2>
+    <div class="directors__grid">
+      {% for director in directors %}
+        <div class="director-card">
+          <img
+            src="{{ ('/assets/images/' + director.img) | url }}"
+            alt="Photo of {{ director.name }}"
+            class="director-card__avatar"
+          />
+
+          <div class="director-card__info">
+            <h3 class="director-card__name">{{ director.name }}</h3>
+            <p class="director-card__title">{{ director.title }}</p>
+          </div>
+
+          <blockquote class="director-card__quote">
+            <p>"{{ director.quote }}"</p>
+          </blockquote>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
