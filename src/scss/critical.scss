@@ -32,31 +32,11 @@
   --container-max-width: 70rem;
   --container-width: 90%;
 
+  // Spacing
   --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0px;
-  line-height: 1.6;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
-}
-
-section {
-  padding: var(--section-spacing) 0;
-}
-
-.accent-text {
-  color: var(--accent-color);
-}
-
+//****** COMPONENTS ****** //
 .btn {
   border: 2px solid var(--border-color);
   border-radius: 100vw;
@@ -74,7 +54,7 @@ section {
     color: var(--primary-color);
   }
 
-  &--dark {
+  &--outline {
     background: var(--text-color);
     border-color: var(--primary-color);
     color: var(--primary-color);
@@ -84,6 +64,30 @@ section {
       color: var(--text-color);
     }
   }
+}
+
+//****** UTILITIES ****** //
+.container {
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  width: var(--container-width);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+//****** STYLES ****** //
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0px;
+  line-height: 1.6;
+}
+
+section {
+  padding: var(--section-spacing) 0;
 }
 
 header {
