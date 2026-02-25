@@ -240,6 +240,73 @@ footer {
   }
 }
 
+.contact {
+  /* General Form Styles */
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.125rem;
+    padding: 0.66667em 1.33334em;
+    height: 3rem;
+    caret-color: var(--text-color);
+    color: inherit;
+    font: inherit;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: calc(3lh + 1.4em); /* 3 line heights + vertical padding */
+    resize: block;
+  }
+
+  // Specific styling
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Error state */
+  .error-message {
+    padding-top: 0.25rem;
+    color: var(--rose-500);
+    display: none;
+  }
+
+  .form-group:has(input:user-invalid),
+  .form-group:has(textarea:user-invalid) {
+    input,
+    textarea {
+      border-color: var(--rose-500);
+      color: var(--rose-500);
+    }
+
+    .error-message {
+      display: block;
+    }
+  }
+}
+
 @media (min-width: 48rem) {
   header {
     .nav-toggle {
