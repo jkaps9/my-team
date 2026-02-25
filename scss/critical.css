@@ -88,7 +88,10 @@ select {
   --teal-400: #79c8c7;
   --rose-500: #ff7f7f;
   --cyan-100: #c4fffe;
-  --primary-color: var(--teal-950);
+  --primary-color: var(--teal-800);
+  --primary-color-dark: var(--teal-850);
+  --primary-color-darker: var(--teal-900);
+  --primary-color-very-dark: var(--teal-950);
   --accent-color: var(--rose-500);
   --bg-color: var(--primary-color);
   --text-color: var(--neutral-0);
@@ -99,6 +102,7 @@ select {
 }
 
 .btn {
+  background-color: transparent;
   border: 2px solid var(--border-color);
   border-radius: 100vw;
   color: var(--text-color);
@@ -115,12 +119,11 @@ select {
   color: var(--primary-color);
 }
 .btn--outline {
-  background: var(--text-color);
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  border-color: var(--primary-color-darker);
+  color: var(--primary-color-darker);
 }
 .btn--outline:hover {
-  background: var(--primary-color);
+  background-color: var(--primary-color-darker);
   color: var(--text-color);
 }
 
@@ -259,8 +262,89 @@ footer {
 .hero__content {
   font-size: 15px;
   font-family: Livvic, sans-serif;
-  font-weight: undefined;
+  font-weight: 600;
   line-height: 186%;
+}
+
+.clients__list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 3.9808rem - 2.0513vw, 3.5rem);
+}
+.clients__list li img {
+  height: 1.5rem;
+  width: auto;
+}
+.clients__list li:last-child img {
+  height: 2.5rem;
+}
+
+.contact {
+  /* General Form Styles */
+}
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.contact button,
+.contact input,
+.contact textarea {
+  font: inherit;
+  width: 100%;
+  cursor: pointer;
+}
+.contact input,
+.contact textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.125rem;
+  padding: 0.66667em 1.33334em;
+  height: 3rem;
+  caret-color: var(--text-color);
+  color: inherit;
+  font: inherit;
+}
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+  outline: none;
+}
+.contact input:hover,
+.contact textarea:hover {
+  outline: none;
+}
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: inherit;
+  font: inherit;
+  opacity: 0.6;
+}
+.contact textarea {
+  height: calc(3lh + 1.4em); /* 3 line heights + vertical padding */
+  resize: block;
+}
+.contact .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact {
+  /* Error state */
+}
+.contact .error-message {
+  padding-top: 0.25rem;
+  color: var(--rose-500);
+  display: none;
+}
+.contact .form-group:has(input:user-invalid) input,
+.contact .form-group:has(input:user-invalid) textarea,
+.contact .form-group:has(textarea:user-invalid) input,
+.contact .form-group:has(textarea:user-invalid) textarea {
+  border-color: var(--rose-500);
+  color: var(--rose-500);
+}
+.contact .form-group:has(input:user-invalid) .error-message,
+.contact .form-group:has(textarea:user-invalid) .error-message {
+  display: block;
 }
 
 @media (min-width: 48rem) {
@@ -287,6 +371,17 @@ footer {
   header .nav__item a {
     color: var(--text-color);
   }
+  .clients__list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+  }
+  .clients__list li img {
+    height: 1rem;
+  }
+  .clients__list li:last-child img {
+    height: 1.75rem;
+  }
 }
 @media (min-width: 64rem) {
   header .logo svg {
@@ -295,7 +390,13 @@ footer {
   .hero__content {
     font-size: 18px;
     font-family: Livvic, sans-serif;
-    font-weight: undefined;
+    font-weight: 600;
     line-height: 155%;
+  }
+  .clients__list li img {
+    height: 2.25rem;
+  }
+  .clients__list li:last-child img {
+    height: 2.75rem;
   }
 }
