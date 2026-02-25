@@ -2,7 +2,7 @@
   <div class="container directors__container">
     <h2 class="directors__title">Meet the directors</h2>
     <div class="directors__grid">
-      {% for director in directors %}
+      {% for director in site.directors %}
         <div class="director-card">
           <img
             src="{{ ('/assets/images/' + director.img) | url }}"
