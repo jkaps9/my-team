@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,600;0,700;1,500&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -88,45 +89,13 @@ select {
   --rose-500: #ff7f7f;
   --cyan-100: #c4fffe;
   --primary-color: var(--teal-950);
-  --primary-hover: #1e40af;
   --accent-color: var(--rose-500);
-  --accent-hover: #65a30d;
   --bg-color: var(--primary-color);
-  --bg-secondary: #f9f9f9;
-  --bg-tertiary: #f5f5f5;
   --text-color: var(--neutral-0);
-  --text-secondary: #555;
-  --text-muted: #666;
   --border-color: var(--neutral-0);
-  --card-bg: #ffffff;
-  --footer-bg: #111;
-  --cta-bg: #1a1a1a;
   --container-max-width: 70rem;
   --container-width: 90%;
   --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
-  --card-padding: 1.5rem 2rem;
-}
-
-body {
-  line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
-}
-
-section {
-  padding: var(--section-spacing) 0;
-}
-
-.accent-text {
-  color: var(--accent-color);
 }
 
 .btn {
@@ -145,14 +114,34 @@ section {
   background-color: var(--text-color);
   color: var(--primary-color);
 }
-.btn--dark {
+.btn--outline {
   background: var(--text-color);
   border-color: var(--primary-color);
   color: var(--primary-color);
 }
-.btn--dark:hover {
+.btn--outline:hover {
   background: var(--primary-color);
   color: var(--text-color);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  width: var(--container-width);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  letter-spacing: 0px;
+}
+
+section {
+  padding: var(--section-spacing) 0;
 }
 
 header {
@@ -261,16 +250,17 @@ footer {
   gap: 2rem;
 }
 .hero__title {
-  font-size: clamp(2rem, 1.1197rem + 3.7559vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
+  font-size: 40px;
+  font-family: Livvic, sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-size: clamp(2.5rem, 1.1796rem + 5.6338vw, 6.25rem);
 }
 .hero__content {
-  font-size: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
-  font-weight: 500;
-  max-width: 65ch;
-  letter-spacing: -0.1px;
+  font-size: 15px;
+  font-family: Livvic, sans-serif;
+  font-weight: undefined;
+  line-height: 186%;
 }
 
 @media (min-width: 48rem) {
@@ -301,5 +291,11 @@ footer {
 @media (min-width: 64rem) {
   header .logo svg {
     height: 2.5rem;
+  }
+  .hero__content {
+    font-size: 18px;
+    font-family: Livvic, sans-serif;
+    font-weight: undefined;
+    line-height: 155%;
   }
 }
