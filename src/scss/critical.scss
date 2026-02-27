@@ -309,12 +309,18 @@ footer {
 .cta {
   &__container {
     align-items: center;
-    justify-content: center;
+    color: var(--primary-color-darker);
     display: flex;  
     flex-direction: column;
-    min-height: 18rem;
     gap: 1rem;
-    color: var(--primary-color-darker);
+    justify-content: center;
+    min-height: 18rem;
+    text-align: center;
+  }
+
+  &__title {
+    @include fonts.textpreset5;
+    max-width: 75%;
   }
 }
 
