@@ -398,10 +398,12 @@ footer {
 .contact input:focus-visible,
 .contact textarea:focus-visible {
   outline: none;
+  border-bottom: 2px solid var(--highlight-color);
 }
 .contact input:hover,
 .contact textarea:hover {
   outline: none;
+  border-color: var(--highlight-color);
 }
 .contact input::placeholder,
 .contact textarea::placeholder {
