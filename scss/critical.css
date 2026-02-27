@@ -93,6 +93,7 @@ select {
   --primary-color-darker: var(--teal-900);
   --primary-color-very-dark: var(--teal-950);
   --accent-color: var(--rose-500);
+  --highlight-color: var(--cyan-100);
   --bg-color: var(--primary-color);
   --text-color: var(--neutral-0);
   --border-color: var(--neutral-0);
@@ -135,6 +136,10 @@ select {
 
 .accent-text {
   color: var(--accent-color);
+}
+
+.highlight-text {
+  color: var(--highlight-color);
 }
 
 .darker-bg {
@@ -307,6 +312,29 @@ footer {
   flex-direction: column;
   gap: 1rem;
   text-align: center;
+}
+
+.testimonials__list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.testimonials__author {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.testimonials__author .author__title {
+  font-style: italic;
+}
+.testimonials__author .author__image {
+  border-radius: 100vw;
+  overflow: hidden;
+  width: 6rem;
+  border: 2px solid var(--highlight-color);
 }
 
 .clients__list {
