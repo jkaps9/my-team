@@ -136,6 +136,7 @@ header {
     right: 0;
     background: none;
     border: none;
+    z-index: 1000;
 
     svg.close {
       visibility: hidden;
@@ -166,36 +167,46 @@ header {
       height: 0;
       position: absolute;
     }
+
+    &:has(.main-nav.visible) .navbar__contact-btn{
+      visibility: visible;
+      height: auto;
+      position: static;
+    }
   }
 
-  .main-nav .nav__list {
+  .main-nav {
     visibility: hidden;
     height: 0;
     position: absolute;
     font-size: 1.125rem;
   }
 
-  .main-nav.visible .nav__list {
-    background-color: var(--bg-secondary);
-    visibility: visible;
-    height: auto;
-    top: 100%;
-    right: 0;
-    left: 0;
+  .main-nav.visible {
+    align-items: center;
+    background-color: var(--bg-color);
+    top: 0;
+    right: -5vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1.5rem;
+    height: 100vh;
     padding: 2rem 1.5rem 1.5rem;
-    z-index: 1000;
+    width: 75vw;
+    visibility: visible;
+    z-index: 800;
 
     .nav__list {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      position: relative;
       text-align: center;
+      z-index: 900;
     }
   }
+
+
 
   .nav__item {
     position: relative;

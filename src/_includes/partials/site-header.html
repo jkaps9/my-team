@@ -1,32 +1,32 @@
 <header>
   <div class="container">
     <div class="navbar">
-      <nav
-        class="main-nav"
-        aria-label="main"
-      >
-        <a
+	<a
           href="{{ '/' | url }}"
           class="logo"
           aria-label="{{ site.name }} - home"
         >
-          {% include "svgs/logo.svg" %}
+         {% include "svgs/logo.svg" %}
         </a>
-        <ul class="nav__list">
+      <nav
+        class="main-nav"
+        aria-label="main"
+      >
+                 <ul class="nav__list">
           {% for item in site.navigation %}
             <li class="nav__item">
               <a href="{{ item.url | url }}">{{ item.text }}</a>
             </li>
           {% endfor %}
         </ul>
-      </nav>
-      <a
-        href="/contact"
-        class="btn navbar__contact-btn"
-      >
-        Contact Us
-      </a>
-      <button class="nav-toggle">
+      	<a
+      	 href="/contact"
+       	 class="btn navbar__contact-btn"
+      	>
+      	  Contact Us
+     	 </a>
+	</nav>
+            <button class="nav-toggle">
         {% include "svgs/icon-hamburger.svg" %}
         {% include "svgs/icon-close.svg" %}
       </button>
