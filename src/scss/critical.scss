@@ -92,6 +92,10 @@
   background-color: var(--accent-color);
 }
 
+.section-title {
+  margin-bottom: 2rem;
+}
+
 //****** STYLES ****** //
 body {
   background-color: var(--bg-color);
@@ -237,6 +241,23 @@ footer {
 
   &__content {
     @include fonts.textpreset7semibold;
+  }
+}
+
+.features {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item,
+  .item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 }
 
