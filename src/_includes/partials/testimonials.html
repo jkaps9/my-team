@@ -1,7 +1,7 @@
 <section class="testimonials">
   <div class="container testimonials__container">
-    <h2 class="testimonials__title">
-      Delivering real results for top companies. Some of our success stories.
+    <h2 class="testimonials__title section-title">
+	    Delivering real results for top companies. Some of our <span class="highlight-text">success stories.</span>
     </h2>
     <div class="testimonials__list">
       {% for testimonial in site.testimonials %}
@@ -9,13 +9,15 @@
           <p class="testimonials__text">"{{ testimonial.text }}"</p>
         </blockquote>
         <div class="testimonials__author">
-          <p class="author__name">{{ testimonial.author.name }}</p>
+          <h3 class="author__name highlight-text">{{ testimonial.author.name }}</h3>
           <p class="author__title">{{ testimonial.author.title }}</p>
+	  <div class="author__image">
           <img
             src="{{ ('/assets/images/' + testimonial.author.img ) | url }}"
             alt="photo of {{ testimonial.author.name }}"
-            class="author__image"
+            class=""
           />
+	  </div>
         </div>
       {% endfor %}
     </div>
