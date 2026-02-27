@@ -192,13 +192,18 @@ header .navbar {
   position: relative;
   padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
 }
-header .main-nav {
+header .navbar__contact-btn {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+header .main-nav .nav__list {
   visibility: hidden;
   height: 0;
   position: absolute;
   font-size: 1.125rem;
 }
-header .main-nav.visible {
+header .main-nav.visible .nav__list {
   background-color: var(--bg-secondary);
   visibility: visible;
   height: auto;
@@ -212,7 +217,7 @@ header .main-nav.visible {
   padding: 2rem 1.5rem 1.5rem;
   z-index: 1000;
 }
-header .main-nav.visible .nav__list {
+header .main-nav.visible .nav__list .nav__list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -355,16 +360,22 @@ footer {
   header .navbar {
     font-size: 1rem;
   }
+  header .navbar__contact-btn {
+    visibility: visible;
+    height: auto;
+    position: static;
+  }
   header .main-nav {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+  }
+  header .main-nav .nav__list {
     visibility: visible;
     height: auto;
     position: relative;
     display: flex;
     align-items: center;
-    gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
-  }
-  header .nav__list {
-    display: flex;
     gap: 2.5rem;
     margin-right: auto;
   }
