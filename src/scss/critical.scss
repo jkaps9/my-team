@@ -371,10 +371,12 @@ footer {
 
     &:focus-visible {
       outline: none;
+      border-bottom: 2px solid var(--highlight-color);
     }
 
     &:hover {
       outline: none;
+      border-color: var(--highlight-color);
     }
 
     &::placeholder {
