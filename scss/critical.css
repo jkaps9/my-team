@@ -141,6 +141,14 @@ select {
   background-color: var(--primary-color-darker);
 }
 
+.bg-dark {
+  background-color: var(--primary-color-dark);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
