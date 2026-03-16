@@ -185,6 +185,36 @@ section {
   padding: var(--section-spacing) 0;
 }
 
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  text-align: center;
+  z-index: 900;
+}
+
+.nav__item {
+  position: relative;
+}
+.nav__item a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+.nav__item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-color);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+.nav__item:hover::after {
+  width: 100%;
+}
+
 header {
   position: relative;
 }
@@ -261,37 +291,17 @@ header .main-nav.visible {
   visibility: visible;
   z-index: 800;
 }
-header .main-nav.visible .nav__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  position: relative;
-  text-align: center;
-  z-index: 900;
-}
-header .nav__item {
-  position: relative;
-}
-header .nav__item a {
-  text-decoration: none;
-  color: var(--text-muted);
-}
-header .nav__item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background-color: var(--accent-color);
-  bottom: -4px;
-  left: 0;
-  transition: width 0.3s;
-}
-header .nav__item:hover::after {
-  width: 100%;
-}
 
 footer {
   text-align: center;
+}
+footer .container {
+  display: grid;
+  justify-items: center;
+}
+footer .nav__list {
+  flex-direction: row;
+  justify-content: center;
 }
 
 .hero {
