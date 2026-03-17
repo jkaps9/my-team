@@ -464,7 +464,11 @@ footer {
 
     .navbar {
       font-size: 1rem;
-      gap: var(--space-xl-600);
+      gap: clamp(
+        var(--space-xl-600),
+        0.7143rem + 4.7619vw,
+        var(--space-xxxxl-1000)
+      );
       justify-content: flex-start;
 
       &__contact-btn {
