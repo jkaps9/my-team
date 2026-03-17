@@ -146,7 +146,7 @@ section {
 
 .nav__list {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   gap: 1.5rem;
   position: relative;
   z-index: 900;
@@ -244,7 +244,6 @@ header {
 
   .main-nav {
     visibility: hidden;
-    height: 0;
     position: absolute;
     font-size: 1.125rem;
   }
@@ -261,6 +260,10 @@ header {
     width: 75vw;
     visibility: visible;
     z-index: 800;
+
+    .nav__list {
+      flex-direction: column;
+    }
   }
 }
 
@@ -461,6 +464,8 @@ footer {
 
     .navbar {
       font-size: 1rem;
+      gap: var(--space-xl-600);
+      justify-content: flex-start;
 
       &__contact-btn {
         visibility: visible;
@@ -472,7 +477,9 @@ footer {
     .main-nav {
       display: flex;
       flex-direction: row;
+      flex: 1;
       gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+      position: relative;
     }
 
     .main-nav .nav__list {
