@@ -281,9 +281,9 @@ footer {
   position: relative;
 
   &__container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-
     gap: clamp(var(--space-sm-200), 0.6479rem + 1.5023vw, var(--space-400));
     text-align: center;
   }
@@ -493,6 +493,10 @@ footer {
     }
   }
 
+  .hero__content {
+    max-width: 573px;
+  }
+
   .clients {
     &__list {
       flex-direction: row;
@@ -518,8 +522,16 @@ footer {
   }
 
   .hero {
+    &__container {
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: start;
+    }
+
     &__content {
       @include fonts.textpreset6semibold;
+      max-width: 445px;
     }
   }
 
