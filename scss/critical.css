@@ -98,7 +98,8 @@ select {
   --text-color: var(--neutral-0);
   --border-color: var(--neutral-0);
   --container-max-width: 70rem;
-  --container-width: 90%;
+  --container-width-mobile: 90%;
+  --container-width: 80%;
   --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
   --space--xxs-025: 0.125rem;
   --space-xs-100: 0.5rem;
@@ -126,6 +127,7 @@ select {
   font-weight: 600;
   line-height: 1.55;
   padding: 0.5em 2em;
+  text-align: center;
   text-decoration: none;
 }
 .btn:hover {
@@ -144,9 +146,14 @@ select {
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
-  width: var(--container-width);
+  width: var(--container-width-mobile);
 }
 
+@media (min-width: 48rem) {
+  .container {
+    width: var(--container-width);
+  }
+}
 .accent-text {
   color: var(--accent-color);
 }
@@ -194,16 +201,22 @@ body:has(header .main-nav.visible)::after {
   z-index: 10;
 }
 
+h2 {
+  font-size: 32px;
+  font-family: Livvic, sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-size: clamp(2rem, 0.8571rem + 2.381vw, 3rem);
+}
+
 section {
   padding: var(--section-spacing) 0;
 }
 
 .nav__list {
   display: flex;
-  flex-direction: column;
   gap: 1.5rem;
   position: relative;
-  text-align: center;
   z-index: 900;
 }
 
@@ -286,12 +299,10 @@ header .navbar:has(.main-nav.visible) .navbar__contact-btn {
 }
 header .main-nav {
   visibility: hidden;
-  height: 0;
   position: absolute;
   font-size: 1.125rem;
 }
 header .main-nav.visible {
-  align-items: center;
   background-color: var(--bg-color);
   top: 0;
   right: -5vw;
@@ -299,10 +310,13 @@ header .main-nav.visible {
   flex-direction: column;
   gap: 1.5rem;
   height: 100vh;
-  padding: 2rem 1.5rem 1.5rem;
+  padding: 6rem 1.5rem 1.5rem;
   width: 75vw;
   visibility: visible;
   z-index: 800;
+}
+header .main-nav.visible .nav__list {
+  flex-direction: column;
 }
 
 footer {
@@ -321,10 +335,11 @@ footer .nav__list {
   position: relative;
 }
 .hero__container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+  gap: clamp(var(--space-sm-200), 0.6479rem + 1.5023vw, var(--space-400));
+  text-align: center;
 }
 .hero__title {
   font-size: 40px;
@@ -340,6 +355,9 @@ footer .nav__list {
   line-height: 186%;
 }
 
+.features__title {
+  max-width: 240px;
+}
 .features__list {
   display: flex;
   flex-direction: column;
@@ -484,6 +502,8 @@ footer .nav__list {
   }
   header .navbar {
     font-size: 1rem;
+    gap: clamp(var(--space-xl-600), 0.7143rem + 4.7619vw, var(--space-xxxxl-1000));
+    justify-content: flex-start;
   }
   header .navbar__contact-btn {
     visibility: visible;
@@ -493,7 +513,9 @@ footer .nav__list {
   header .main-nav {
     display: flex;
     flex-direction: row;
+    flex: 1;
     gap: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+    position: relative;
   }
   header .main-nav .nav__list {
     visibility: visible;
@@ -506,6 +528,12 @@ footer .nav__list {
   }
   header .nav__item a {
     color: var(--text-color);
+  }
+  .hero__content {
+    max-width: 573px;
+  }
+  .features__title {
+    max-width: 445px;
   }
   .clients__list {
     flex-direction: row;
@@ -523,11 +551,18 @@ footer .nav__list {
   header .logo svg {
     height: 2.5rem;
   }
+  .hero__container {
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+  }
   .hero__content {
     font-size: 18px;
     font-family: Livvic, sans-serif;
     font-weight: 600;
     line-height: 155%;
+    max-width: 445px;
   }
   .clients__list li img {
     height: 2.25rem;
