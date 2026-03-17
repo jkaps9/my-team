@@ -34,7 +34,8 @@
 
   // CONTAINER
   --container-max-width: 70rem;
-  --container-width: 90%;
+  --container-width-mobile: 90%;
+  --container-width: 80%;
 
   // Spacing
   --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
@@ -89,7 +90,13 @@
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
-  width: var(--container-width);
+  width: var(--container-width-mobile);
+}
+
+@media (min-width: 48rem) {
+  .container {
+    width: var(--container-width);
+  }
 }
 
 .accent-text {
@@ -138,6 +145,11 @@ body:has(header .main-nav.visible)::after {
   opacity: 0.6;
   right: 0;
   z-index: 10;
+}
+
+h2 {
+  @include fonts.textpreset5;
+  font-size: clamp(2rem, 0.8571rem + 2.381vw, 3rem);
 }
 
 section {
@@ -301,6 +313,10 @@ footer {
 }
 
 .features {
+  &__title {
+    max-width: 240px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -507,6 +523,11 @@ footer {
     max-width: 573px;
   }
 
+  .features {
+    &__title {
+      max-width: 445px;
+    }
+  }
   .clients {
     &__list {
       flex-direction: row;
