@@ -152,6 +152,11 @@ h2 {
   font-size: clamp(2rem, 0.8571rem + 2.381vw, 3rem);
 }
 
+h3 {
+  @include fonts.textpreset6bold;
+  color: var(--highlight-color);
+}
+
 section {
   padding: var(--section-spacing) 0;
 }
@@ -467,6 +472,33 @@ footer {
 
     .error-message {
       display: block;
+    }
+  }
+}
+
+.directors {
+  &__grid {
+    display: grid;
+    gap: var(--space-md-300);
+  }
+
+  .director-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    padding: var(--space-400) var(--space-150);
+
+    &__avatar {
+      height: 96px;
+      width: auto;
+      border: 2px solid var(--teal-400);
+      border-radius: 100vw;
+      margin-bottom: var(--space-sm-200);
+    }
+
+    &__title {
+      @include fonts.textpreset7mediumitalic;
     }
   }
 }
