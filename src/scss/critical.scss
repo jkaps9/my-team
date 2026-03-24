@@ -161,6 +161,10 @@ section {
   padding: var(--section-spacing) 0;
 }
 
+blockquote {
+  @include fonts.textpreset7semibold;
+}
+
 .nav__list {
   display: flex;
   // flex-direction: column;
@@ -512,6 +516,8 @@ footer {
     }
 
     .back {
+      padding: var(--space-400);
+      text-align: center;
       transform: rotateY(180deg);
     }
 
