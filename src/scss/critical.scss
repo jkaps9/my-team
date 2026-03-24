@@ -484,19 +484,21 @@ footer {
 
   .director-card {
     min-height: 253px;
-    padding: var(--space-400) var(--space-150);
     position: relative;
     perspective: 1000px;
 
     &__inner {
+      background-clip: padding-box;
       position: relative;
       width: 100%;
       height: 100%;
       transform-style: preserve-3d;
       transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
     }
+
     .front,
     .back {
+      padding: var(--space-400) var(--space-150);
       position: absolute;
       top: 0;
       left: 0;
@@ -537,6 +539,12 @@ footer {
       left: calc(50% - 28px);
       position: absolute;
       width: 56px;
+    }
+
+    &.flipped {
+      .director-card__inner {
+        transform: rotateY(180deg);
+      }
     }
   }
 }

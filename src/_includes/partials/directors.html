@@ -3,8 +3,8 @@
     <h2 class="directors__title">Meet the directors</h2>
     <div class="directors__grid">
       {% for director in site.directors %}
-        <div class="director-card darker-bg">
-          <div class="director-card__inner">
+        <div class="director-card">
+          <div class="director-card__inner darker-bg">
             <div class="front">
               <img
                 src="{{ ('/assets/images/' + director.img) | url }}"
@@ -23,10 +23,10 @@
                 <p>"{{ director.quote }}"</p>
               </blockquote>
             </div>
+            <button class="director-card__btn">
+              {% include "svgs/icon-cross.svg" %}
+            </button>
           </div>
-          <button class="director-card__btn">
-            {% include "svgs/icon-cross.svg" %}
-          </button>
         </div>
       {% endfor %}
     </div>
