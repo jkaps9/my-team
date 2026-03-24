@@ -7,3 +7,13 @@ if (navToggle && mainNav) {
     mainNav.classList.toggle("visible");
   });
 }
+
+const directorCards = document.querySelectorAll(".director-card");
+
+if (directorCards) {
+  directorCards.forEach((card) => {
+    card.querySelector(".director-card__btn").addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  });
+}

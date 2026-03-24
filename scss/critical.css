@@ -209,8 +209,23 @@ h2 {
   font-size: clamp(2rem, 0.8571rem + 2.381vw, 3rem);
 }
 
+h3 {
+  font-size: 18px;
+  font-family: Livvic, sans-serif;
+  font-weight: 700;
+  line-height: 155%;
+  color: var(--highlight-color);
+}
+
 section {
   padding: var(--section-spacing) 0;
+}
+
+blockquote p {
+  font-size: 15px;
+  font-family: Livvic, sans-serif;
+  font-weight: 600;
+  line-height: 186%;
 }
 
 .nav__list {
@@ -493,6 +508,86 @@ footer .nav__list {
 .contact .form-group:has(input:user-invalid) .error-message,
 .contact .form-group:has(textarea:user-invalid) .error-message {
   display: block;
+}
+
+.directors__grid {
+  display: grid;
+  gap: var(--space-xl-600);
+}
+.directors .director-card {
+  min-height: 253px;
+  position: relative;
+  perspective: 1000px;
+}
+.directors .director-card__inner {
+  background-clip: padding-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.directors .director-card .front,
+.directors .director-card .back {
+  padding: var(--space-400) var(--space-150);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.directors .director-card .back {
+  padding: var(--space-400);
+  text-align: center;
+  transform: rotateY(180deg);
+}
+.directors .director-card .back .director-card__name {
+  margin-bottom: var(--space-xs-100);
+}
+.directors .director-card__avatar {
+  height: 96px;
+  width: auto;
+  border: 2px solid var(--teal-400);
+  border-radius: 100vw;
+  margin-bottom: var(--space-sm-200);
+}
+.directors .director-card__title {
+  font-size: 15px;
+  font-family: Livvic, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 166%;
+}
+.directors .director-card__btn {
+  align-items: center;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 100vw;
+  bottom: -28px;
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  left: calc(50% - 28px);
+  position: absolute;
+  transition: background 1s cubic-bezier(0.4, 0.2, 0.2, 1), transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+  width: 56px;
+}
+.directors .director-card__socials {
+  display: flex;
+  gap: var(--space-sm-200);
+  margin-top: var(--space-sm-200);
+}
+.directors .director-card.flipped .director-card__inner {
+  transform: rotateY(180deg);
+}
+.directors .director-card.flipped .director-card__btn {
+  background: var(--highlight-color);
+  transform: rotate(-45deg);
 }
 
 @media (min-width: 48rem) {
