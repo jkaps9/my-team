@@ -479,7 +479,7 @@ footer {
 .directors {
   &__grid {
     display: grid;
-    gap: var(--space-md-300);
+    gap: var(--space-xl-600);
   }
 
   .director-card {
@@ -523,6 +523,20 @@ footer {
 
     &__title {
       @include fonts.textpreset7mediumitalic;
+    }
+
+    &__btn {
+      align-items: center;
+      background: var(--accent-color);
+      border: none;
+      border-radius: 100vw;
+      bottom: -28px;
+      display: flex;
+      height: 56px;
+      justify-content: center;
+      left: calc(50% - 28px);
+      position: absolute;
+      width: 56px;
     }
   }
 }
