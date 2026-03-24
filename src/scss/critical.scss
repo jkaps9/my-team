@@ -483,6 +483,15 @@ footer {
 }
 
 .directors {
+  &__title {
+    margin-bottom: clamp(
+      var(--space-xl-600),
+      1.8603rem + 2.3774vw,
+      var(--space-xxl-700)
+    );
+    text-align: center;
+  }
+
   &__grid {
     display: grid;
     gap: var(--space-xl-600);
@@ -649,6 +658,16 @@ footer {
       }
     }
   }
+  .directors {
+    &__grid {
+      column-gap: clamp(
+        var(--space-150),
+        -0.8036rem + 2.9762vw,
+        var(--space-lg-500)
+      );
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 @media (min-width: 64rem) {
@@ -681,6 +700,12 @@ footer {
       li:last-child img {
         height: 2.75rem;
       }
+    }
+  }
+
+  .directors {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
