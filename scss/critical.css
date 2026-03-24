@@ -655,7 +655,7 @@ footer .nav__list {
     height: 2.5rem;
   }
   .hero__container {
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: row;
     justify-content: space-between;
     text-align: start;
