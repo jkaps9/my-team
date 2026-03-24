@@ -510,6 +510,10 @@ footer .nav__list {
   display: block;
 }
 
+.directors__title {
+  margin-bottom: clamp(var(--space-xl-600), 1.8603rem + 2.3774vw, var(--space-xxl-700));
+  text-align: center;
+}
 .directors__grid {
   display: grid;
   gap: var(--space-xl-600);
@@ -641,6 +645,10 @@ footer .nav__list {
   .clients__list li:last-child img {
     height: 1.75rem;
   }
+  .directors__grid {
+    column-gap: clamp(var(--space-150), -0.8036rem + 2.9762vw, var(--space-lg-500));
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 64rem) {
   header .logo svg {
@@ -664,5 +672,8 @@ footer .nav__list {
   }
   .clients__list li:last-child img {
     height: 2.75rem;
+  }
+  .directors__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
