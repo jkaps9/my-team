@@ -706,6 +706,12 @@ footer {
         text-decoration: none;
       }
     }
+
+    &__socials {
+      display: flex;
+      gap: var(--space-sm-200);
+      margin: 0 auto;
+    }
   }
 }
 @media (min-width: 48rem) {
