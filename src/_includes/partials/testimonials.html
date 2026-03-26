@@ -8,6 +8,7 @@
       {% for testimonial in site.testimonials %}
         <div class="testimonials__item">
           <blockquote>
+            {% include "svgs/icon-quotes.svg" %}
             <p class="testimonials__text">"{{ testimonial.text }}"</p>
           </blockquote>
           <div class="testimonials__author">

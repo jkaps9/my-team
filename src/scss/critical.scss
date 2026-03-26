@@ -390,6 +390,19 @@ footer {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs-100);
+
+    blockquote {
+      position: relative;
+
+      svg {
+        margin: 0 auto;
+        position: absolute;
+        left: calc(50% - 33px);
+        top: -36px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
   }
 
   &__author {
