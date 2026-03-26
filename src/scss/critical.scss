@@ -331,6 +331,12 @@ footer {
   }
 }
 
+.hero--about {
+  .accent-bar {
+    display: none;
+  }
+}
+
 .features {
   &__title {
     max-width: 240px;
