@@ -412,6 +412,22 @@ footer .nav__list {
   text-align: center;
 }
 
+.testimonials {
+  position: relative;
+  padding-block: 150px;
+}
+.testimonials__image--top {
+  display: flex;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.testimonials__image--bottom {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
 .testimonials__title {
   text-align: center;
   margin-bottom: 5.25rem;
