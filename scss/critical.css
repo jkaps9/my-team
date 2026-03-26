@@ -480,6 +480,11 @@ footer .nav__list {
   gap: var(--space--xxs-025);
 }
 
+.cta {
+  overflow: hidden;
+  position: relative;
+  padding: 80px 0;
+}
 .cta__container {
   align-items: center;
   color: var(--primary-color-darker);
@@ -487,7 +492,6 @@ footer .nav__list {
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
-  min-height: 18rem;
   text-align: center;
 }
 .cta__title {
@@ -496,6 +500,12 @@ footer .nav__list {
   font-weight: 700;
   line-height: 100%;
   max-width: 75%;
+}
+.cta__image {
+  bottom: -22px;
+  display: flex;
+  left: 0;
+  position: absolute;
 }
 
 .clients__list {
@@ -722,6 +732,11 @@ footer .nav__list {
     margin-inline: auto;
     max-width: 75vw;
   }
+  .cta__container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 917px;
+  }
   .clients__list {
     flex-direction: row;
     justify-content: space-between;
@@ -774,6 +789,9 @@ footer .nav__list {
   }
   .testimonials__list {
     flex-direction: row;
+  }
+  .cta__image {
+    bottom: 0;
   }
   .clients__list li img {
     height: 2.25rem;
