@@ -337,6 +337,12 @@ footer {
   &__text {
     @include fonts.textpreset7semibold;
   }
+
+  &__image {
+    display: flex;
+    transform: translateY(var(--section-spacing));
+    width: 100%;
+  }
 }
 
 .hero--about {
