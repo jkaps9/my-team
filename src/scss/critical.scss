@@ -673,6 +673,14 @@ footer {
   }
 
   .features {
+    &__item {
+      flex-direction: row;
+    }
+
+    .item__content {
+      text-align: start;
+    }
+
     &__title {
       max-width: 445px;
     }
@@ -729,9 +737,19 @@ footer {
     }
   }
 
-  .features__image {
-    bottom: 0;
-    top: auto;
+  .features {
+    &__container {
+      display: flex;
+    }
+
+    &__image {
+      bottom: 0;
+      top: auto;
+    }
+
+    &__list {
+      padding-top: var(--space-400);
+    }
   }
 
   .hero--about {
