@@ -123,6 +123,14 @@
   margin-bottom: 2rem;
 }
 
+.accent-bar {
+  background: var(--accent-color);
+  display: block;
+  height: 4px;
+  margin-bottom: var(--space-400);
+  width: 50px;
+}
+
 //****** STYLES ****** //
 body {
   background-color: var(--bg-color);
