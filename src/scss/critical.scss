@@ -373,6 +373,23 @@ footer {
 }
 
 .testimonials {
+  position: relative;
+  padding-block: 150px;
+
+  &__image--top {
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__image--bottom {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 5.25rem;
