@@ -313,14 +313,6 @@ footer {
 .hero {
   position: relative;
 
-  &__container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(var(--space-sm-200), 0.6479rem + 1.5023vw, var(--space-400));
-    text-align: center;
-  }
-
   &__content {
     align-items: center;
     display: flex;
@@ -664,6 +656,11 @@ footer {
 
   .hero__text {
     max-width: 573px;
+  }
+
+  .hero__image {
+    margin-left: auto;
+    max-width: 358px;
   }
 
   .features {
