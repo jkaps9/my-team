@@ -38,7 +38,7 @@
   --container-width: 80%;
 
   // Spacing
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+  --section-spacing: clamp(3.75rem, 2.8697rem + 3.7559vw, 6.25rem);
 
   --space--xxs-025: 0.125rem;
   --space-xs-100: 0.5rem;
@@ -373,22 +373,33 @@ footer {
 }
 
 .testimonials {
+  &__title {
+    text-align: center;
+    margin-bottom: 5.25rem;
+  }
+
   &__list {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 5.25rem;
     text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs-100);
   }
 
   &__author {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-sm-200);
     .author {
       &__title {
-        font-style: italic;
+        @include fonts.textpreset8mediumitalic;
       }
       &__image {
         border-radius: 100vw;
@@ -396,6 +407,12 @@ footer {
         width: 6rem;
         border: 2px solid var(--highlight-color);
       }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space--xxs-025);
     }
   }
 }
