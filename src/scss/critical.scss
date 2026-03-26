@@ -344,6 +344,15 @@ footer {
 }
 
 .features {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 200px;
+  }
+
   &__title {
     max-width: 240px;
   }
@@ -667,6 +676,10 @@ footer {
     &__title {
       max-width: 445px;
     }
+
+    &__image {
+      max-width: 200px;
+    }
   }
   .clients {
     &__list {
@@ -714,6 +727,11 @@ footer {
       @include fonts.textpreset6semibold;
       max-width: 445px;
     }
+  }
+
+  .features__image {
+    bottom: 0;
+    top: auto;
   }
 
   .hero--about {
