@@ -680,8 +680,7 @@ footer {
   }
   .footer {
     &__container {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: var(--space-md-300);
 
       p {
