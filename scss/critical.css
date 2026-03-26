@@ -428,6 +428,17 @@ footer .nav__list {
   flex-direction: column;
   gap: var(--space-xs-100);
 }
+.testimonials__item blockquote {
+  position: relative;
+}
+.testimonials__item blockquote svg {
+  margin: 0 auto;
+  position: absolute;
+  left: calc(50% - 33px);
+  top: -36px;
+  width: 100%;
+  z-index: -1;
+}
 .testimonials__author {
   align-items: center;
   display: flex;
@@ -690,6 +701,10 @@ footer .nav__list {
   }
   .features__image {
     max-width: 200px;
+  }
+  .testimonials__title {
+    margin-inline: auto;
+    max-width: 75vw;
   }
   .clients__list {
     flex-direction: row;
