@@ -705,6 +705,11 @@ footer {
     }
   }
 
+  .hero--about {
+    .accent-bar {
+      display: block;
+    }
+  }
   .clients {
     &__list {
       li img {
