@@ -740,6 +740,7 @@ footer {
   .features {
     &__container {
       display: flex;
+      gap: 7.75rem;
     }
 
     &__image {
@@ -747,8 +748,8 @@ footer {
       top: auto;
     }
 
-    &__list {
-      padding-top: var(--space-400);
+    ul[class] {
+      margin-top: var(--space-400);
     }
   }
 
