@@ -166,8 +166,7 @@ h3 {
   color: var(--highlight-color);
 }
 
-section,
-footer {
+section {
   padding: var(--section-spacing) 0;
 }
 
@@ -663,6 +662,7 @@ header {
 }
 
 footer {
+  padding-block: calc(0.5 * var(--section-spacing));
   text-align: center;
   .nav__list {
     display: flex;
@@ -914,6 +914,22 @@ footer {
   .directors {
     &__grid {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  footer {
+    .footer {
+      &__container {
+        align-items: center;
+        gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+
+        .footer__socials,
+        .footer__copyright {
+          grid-column: 3;
+          justify-self: end;
+        }
+      }
     }
   }
 }
