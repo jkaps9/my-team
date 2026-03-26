@@ -794,6 +794,14 @@ footer {
       display: block;
     }
   }
+
+  .testimonials__title {
+    max-width: 932px;
+  }
+  .testimonials__list {
+    flex-direction: row;
+  }
+
   .clients {
     &__list {
       li img {
