@@ -321,12 +321,20 @@ footer {
     text-align: center;
   }
 
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(var(--space-sm-200), 0.6479rem + 1.5023vw, var(--space-400));
+    text-align: center;
+  }
+
   &__title {
     @include fonts.textpreset4;
     font-size: clamp(2.5rem, 1.1796rem + 5.6338vw, 6.25rem);
   }
 
-  &__content {
+  &__text {
     @include fonts.textpreset7semibold;
   }
 }
@@ -648,7 +656,7 @@ footer {
     }
   }
 
-  .hero__content {
+  .hero__text {
     max-width: 573px;
   }
 
@@ -692,14 +700,14 @@ footer {
   }
 
   .hero {
-    &__container {
+    &__content {
       align-items: flex-start;
       flex-direction: row;
       justify-content: space-between;
       text-align: start;
     }
 
-    &__content {
+    &__text {
       @include fonts.textpreset6semibold;
       max-width: 445px;
     }
