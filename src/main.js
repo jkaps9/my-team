@@ -17,10 +17,13 @@ if (navToggle && mainNav) {
 
 const directorCards = document.querySelectorAll(".director-card");
 
-if (directorCards) {
+if (directorCards.length > 0) {
   directorCards.forEach((card) => {
-    card.querySelector(".director-card__btn").addEventListener("click", () => {
-      card.classList.toggle("flipped");
-    });
+    const btn = card.querySelector(".director-card__btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+      });
+    }
   });
 }
