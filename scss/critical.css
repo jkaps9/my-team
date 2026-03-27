@@ -142,6 +142,10 @@ select {
   background-color: var(--primary-color-darker);
   color: var(--text-color);
 }
+.btn--solid {
+  background-color: var(--neutral-0);
+  color: var(--primary-color-very-dark);
+}
 
 .container {
   margin: 0 auto;
@@ -168,6 +172,10 @@ select {
 
 .bg-dark {
   background-color: var(--primary-color-dark);
+}
+
+.bg-very-dark {
+  background-color: var(--primary-color-very-dark);
 }
 
 .bg-accent {
@@ -207,6 +215,13 @@ body:has(header .main-nav.visible)::after {
   opacity: 0.6;
   right: 0;
   z-index: 10;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: Livvic, sans-serif;
+  font-weight: 700;
+  line-height: 100%;
 }
 
 h2 {
@@ -325,6 +340,18 @@ header .main-nav {
   position: absolute;
   font-size: 1.125rem;
 }
+header .main-nav__image {
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  display: none;
+}
+@media (max-width: 767px) {
+  header .main-nav {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+}
 header .main-nav.visible {
   background-color: var(--bg-color);
   top: 0;
@@ -335,11 +362,19 @@ header .main-nav.visible {
   height: 100vh;
   padding: 6rem 1.5rem 1.5rem;
   width: 75vw;
+  transform: translateX(0);
   visibility: visible;
   z-index: 800;
 }
+header .main-nav.visible .main-nav__image {
+  display: flex;
+  z-index: 801;
+}
 header .main-nav.visible .nav__list {
   flex-direction: column;
+}
+header .main-nav.visible .nav__list .nav__item {
+  width: fit-content;
 }
 
 .hero {
@@ -351,13 +386,6 @@ header .main-nav.visible .nav__list {
   flex-direction: column;
   gap: clamp(var(--space-sm-200), 0.6479rem + 1.5023vw, var(--space-400));
   text-align: center;
-}
-.hero__title {
-  font-size: 40px;
-  font-family: Livvic, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  font-size: clamp(2.5rem, 1.1796rem + 5.6338vw, 6.25rem);
 }
 .hero__text {
   font-size: 15px;
@@ -506,6 +534,14 @@ header .main-nav.visible .nav__list {
   position: absolute;
 }
 
+.clients {
+  overflow: hidden;
+  position: relative;
+}
+.clients__title {
+  text-align: center;
+  margin-bottom: 2em;
+}
 .clients__list {
   align-items: center;
   display: flex;
@@ -519,7 +555,34 @@ header .main-nav.visible .nav__list {
 .clients__list li:last-child img {
   height: 2.5rem;
 }
+.clients__image {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
 
+.contact {
+  overflow: hidden;
+  position: relative;
+}
+.contact__title, .contact__subtitle {
+  text-align: center;
+}
+.contact__subtitle {
+  font-size: 32px;
+  font-family: Livvic, sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 2em;
+}
+.contact__features {
+  margin-bottom: var(--space-md-300);
+}
+.contact__features .feature {
+  align-items: center;
+  display: flex;
+  gap: var(--space-md-300);
+}
 .contact {
   /* General Form Styles */
 }
@@ -587,6 +650,20 @@ header .main-nav.visible .nav__list {
 .contact .form-group:has(input:user-invalid) .error-message,
 .contact .form-group:has(textarea:user-invalid) .error-message {
   display: block;
+}
+.contact .btn {
+  justify-self: start;
+  width: fit-content;
+}
+.contact__image {
+  position: absolute;
+}
+.contact__image--top {
+  display: none;
+}
+.contact__image--bottom {
+  bottom: -125px;
+  right: -100px;
 }
 
 .directors {
@@ -665,6 +742,9 @@ header .main-nav.visible .nav__list {
   transition: background-color 1s cubic-bezier(0.4, 0.2, 0.2, 1), transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
   width: 56px;
 }
+.directors .director-card__btn:hover {
+  background-color: var(--highlight-color);
+}
 .directors .director-card__socials {
   display: flex;
   gap: var(--space-sm-200);
@@ -731,7 +811,26 @@ footer .footer__socials {
   margin: 0 auto;
 }
 
+.footer__socials__item,
+.director-card__socials__item {
+  transition: transform 0.3s ease-in-out;
+}
+.footer__socials__item:hover,
+.director-card__socials__item:hover {
+  transform: translateY(-4px);
+}
+.footer__socials__item:hover svg *,
+.director-card__socials__item:hover svg * {
+  fill: var(--accent-color);
+}
+
 @media (min-width: 48rem) {
+  h1 {
+    font-size: 64px;
+    font-family: Livvic, sans-serif;
+    font-weight: 700;
+    line-height: 115%;
+  }
   header .nav-toggle {
     height: 0;
     visibility: hidden;
@@ -799,6 +898,9 @@ footer .footer__socials {
     justify-content: space-between;
     max-width: 917px;
   }
+  .clients__title {
+    margin-bottom: 1em;
+  }
   .clients__list {
     flex-direction: row;
     justify-content: space-between;
@@ -810,12 +912,25 @@ footer .footer__socials {
   .clients__list li:last-child img {
     height: 1.75rem;
   }
+  .clients__image {
+    left: 0;
+  }
   .directors__grid {
     column-gap: clamp(var(--space-150), -0.8036rem + 2.9762vw, var(--space-lg-500));
     grid-template-columns: repeat(2, 1fr);
   }
   .directors__image--top {
     top: 0;
+  }
+  .contact__container {
+    width: 70%;
+  }
+  .contact__image--top {
+    display: block;
+    left: -100px;
+  }
+  .contact__image--bottom {
+    bottom: 0;
   }
   footer .footer__container {
     grid-template-columns: repeat(2, 1fr);
@@ -841,6 +956,12 @@ footer .footer__socials {
   header .logo svg {
     height: 2.5rem;
   }
+  .hero__title {
+    font-size: 100px;
+    font-family: Livvic, sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+  }
   .hero__content {
     align-items: flex-start;
     flex-direction: row;
@@ -853,6 +974,12 @@ footer .footer__socials {
     font-weight: 600;
     line-height: 155%;
     max-width: 445px;
+  }
+  .hero--about .hero__title {
+    font-size: 64px;
+    font-family: Livvic, sans-serif;
+    font-weight: 700;
+    line-height: 115%;
   }
   .hero--about .hero__text {
     max-width: 67ch;
@@ -886,8 +1013,25 @@ footer .footer__socials {
   .clients__list li:last-child img {
     height: 2.75rem;
   }
+  .clients__image {
+    top: 0;
+  }
   .directors__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact__title, .contact__subtitle {
+    text-align: start;
+  }
+  .contact__subtitle {
+    margin-bottom: 0.5em;
+  }
+  .contact form {
+    max-width: 500px;
+    width: 100%;
   }
   footer .footer__container {
     align-items: center;
