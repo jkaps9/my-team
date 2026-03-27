@@ -602,8 +602,9 @@ header {
   }
 
   textarea {
-    height: calc(3lh + 1.4em); /* 3 line heights + vertical padding */
-    resize: block;
+    line-height: 1.2;
+    height: calc(3 * 1.2em + 1.4em); /* 3 line heights + vertical padding */
+    resize: vertical;
   }
 
   // Specific styling
