@@ -9,18 +9,24 @@
     </h2>
     <div class="testimonials__list">
       {% for testimonial in site.testimonials %}
-        <div class="testimonials__item">
+        <article
+          class="testimonials__item"
+          aria-labelledby="{{ testimonial.author.name }}"
+        >
           <blockquote>
             {% include "svgs/icon-quotes.svg" %}
             <p class="testimonials__text">"{{ testimonial.text }}"</p>
           </blockquote>
-          <div class="testimonials__author">
-            <div class="testimonials__author__text">
+          <footer
+            class="testimonials__author"
+            id="{{ testimonial.author.name }}"
+          >
+            <cite class="testimonials__author__text">
               <h3 class="author__name highlight-text">
                 {{ testimonial.author.name }}
               </h3>
               <p class="author__title">{{ testimonial.author.title }}</p>
-            </div>
+            </cite>
             <div class="author__image">
               <img
                 src="{{ ('/assets/images/' + testimonial.author.img ) | url }}"
@@ -28,8 +34,8 @@
                 class=""
               />
             </div>
-          </div>
-        </div>
+          </footer>
+        </article>
       {% endfor %}
     </div>
   </div>
