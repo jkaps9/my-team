@@ -342,18 +342,6 @@ header .main-nav.visible .nav__list {
   flex-direction: column;
 }
 
-footer {
-  text-align: center;
-}
-footer .container {
-  display: grid;
-  justify-items: center;
-}
-footer .nav__list {
-  flex-direction: row;
-  justify-content: center;
-}
-
 .hero {
   position: relative;
 }
@@ -675,6 +663,47 @@ footer .nav__list {
   transform: rotate(-45deg);
 }
 
+footer {
+  padding-block: calc(0.5 * var(--section-spacing));
+  text-align: center;
+}
+footer .nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-lg-500);
+  justify-content: center;
+}
+footer .footer__container {
+  display: grid;
+  gap: var(--space-md-300);
+  justify-items: center;
+}
+footer .footer__container p {
+  font-size: 15px;
+  font-family: Livvic, sans-serif;
+  font-weight: 600;
+  line-height: 186%;
+  opacity: 0.6;
+}
+footer .footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md-300);
+}
+footer .footer__contact {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__contact a {
+  color: inherit;
+  text-decoration: none;
+}
+footer .footer__socials {
+  display: flex;
+  gap: var(--space-sm-200);
+  margin: 0 auto;
+}
+
 @media (min-width: 48rem) {
   header .nav-toggle {
     height: 0;
@@ -752,6 +781,25 @@ footer .nav__list {
     column-gap: clamp(var(--space-150), -0.8036rem + 2.9762vw, var(--space-lg-500));
     grid-template-columns: repeat(2, 1fr);
   }
+  footer .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+  footer .footer__container .footer-nav,
+  footer .footer__container .footer__socials {
+    justify-self: start;
+  }
+  footer .footer__container .nav__list {
+    justify-content: start;
+  }
+  footer .footer__container .footer__contact,
+  footer .footer__container .footer__copyright {
+    justify-self: end;
+    text-align: end;
+  }
+  footer .footer__container .footer__socials {
+    margin: 0;
+  }
 }
 @media (min-width: 64rem) {
   header .logo svg {
@@ -801,5 +849,15 @@ footer .nav__list {
   }
   .directors__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  footer .footer__container {
+    align-items: center;
+    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer .footer__container .footer__socials,
+  footer .footer__container .footer__copyright {
+    grid-column: 3;
+    justify-self: end;
   }
 }
