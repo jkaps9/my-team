@@ -14,10 +14,7 @@
             {% include "svgs/icon-quotes.svg" %}
             <p class="testimonials__text">"{{ testimonial.text }}"</p>
           </blockquote>
-          <footer
-            class="testimonials__author"
-            id="{{ testimonial.author.name }}"
-          >
+          <footer class="testimonials__author">
             <cite class="testimonials__author__text">
               <h3 class="author__name highlight-text">
                 {{ testimonial.author.name }}
