@@ -27,8 +27,22 @@
                 <p>"{{ director.quote }}"</p>
               </blockquote>
               <ul class="director-card__socials">
-                <li>{% include "svgs/icon-twitter.svg" %}</li>
-                <li>{% include "svgs/icon-linkedin.svg" %}</li>
+                <li class="director-card__socials__item">
+                  <a
+                    href="https://www.twitter.com"
+                    target="_blank"
+                  >
+                    {% include "svgs/icon-twitter.svg" %}
+                  </a>
+                </li>
+                <li class="director-card__socials__item">
+                  <a
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                  >
+                    {% include "svgs/icon-linkedin.svg" %}
+                  </a>
+                </li>
               </ul>
             </div>
             <button class="director-card__btn">

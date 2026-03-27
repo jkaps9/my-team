@@ -788,15 +788,18 @@ footer {
       display: flex;
       gap: var(--space-sm-200);
       margin: 0 auto;
+    }
+  }
+}
 
-      &__item {
-        transition: transform 0.3s ease-in-out;
-        &:hover {
-          transform: translateY(-4px);
-          svg * {
-            fill: var(--accent-color);
-          }
-        }
+.footer__socials,
+.director-card__socials {
+  &__item {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-4px);
+      svg * {
+        fill: var(--accent-color);
       }
     }
   }
