@@ -84,6 +84,11 @@
       color: var(--text-color);
     }
   }
+
+  &--solid {
+    background-color: var(--neutral-0);
+    color: var(--primary-color-very-dark);
+  }
 }
 
 //****** UTILITIES ****** //
@@ -505,6 +510,24 @@ header {
 }
 
 .contact {
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 2em;
+  }
+
+  &__features {
+    margin-bottom: var(--space-md-300);
+
+    .feature {
+      align-items: center;
+      display: flex;
+      gap: var(--space-md-300);
+    }
+  }
   /* General Form Styles */
   form {
     display: grid;
@@ -576,6 +599,11 @@ header {
     .error-message {
       display: block;
     }
+  }
+
+  .btn {
+    justify-self: start;
+    width: fit-content;
   }
 }
 
