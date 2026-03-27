@@ -7,12 +7,9 @@
       Delivering real results for top companies. Some of our
       <span class="highlight-text">success stories.</span>
     </h2>
-    <div class="testimonials__list">
+    <ul class="testimonials__list">
       {% for testimonial in site.testimonials %}
-        <article
-          class="testimonials__item"
-          aria-labelledby="{{ testimonial.author.name }}"
-        >
+        <li class="testimonials__item">
           <blockquote>
             {% include "svgs/icon-quotes.svg" %}
             <p class="testimonials__text">"{{ testimonial.text }}"</p>
@@ -35,9 +32,9 @@
               />
             </div>
           </footer>
-        </article>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
   <div class="testimonials__image--bottom">
     {% include "svgs/bg-pattern-home-5.svg" %}
