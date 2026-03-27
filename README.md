@@ -1,4 +1,4 @@
-# Frontend Mentor - Tech book club landing page solution
+# Frontend Mentor - My Team multi-page website solution
 
 This is a solution to the [myteam website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
