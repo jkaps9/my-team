@@ -30,6 +30,8 @@
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
           placeholder="Name"
+          aria-label="Full name form field"
+          autocomplete="name"
           required
         />
         <div class="error-message">This field is required</div>
@@ -43,6 +45,8 @@
           oninvalid="this.setCustomValidity('Please enter a valid email address')"
           oninput="this.setCustomValidity('')"
           placeholder="Email Address"
+          aria-label="Email address form field"
+          autocomplete="email"
           required
         />
         <div class="error-message">This field is required</div>
@@ -56,6 +60,8 @@
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
           placeholder="Company Name"
+          aria-label="Company name form field"
+          autocomplete="organization"
           required
         />
         <div class="error-message">This field is required</div>
@@ -69,6 +75,8 @@
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
           placeholder="Title"
+          aria-label="Company title form field"
+          autocomplete="organization-title"
           required
         />
         <div class="error-message">This field is required</div>
@@ -81,6 +89,7 @@
           oninvalid="this.setCustomValidity('This field is required')"
           oninput="this.setCustomValidity('')"
           placeholder="Message"
+          aria-label="Message form field"
           required
         ></textarea>
         <div class="error-message">This field is required</div>
