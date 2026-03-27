@@ -771,6 +771,15 @@ footer {
     max-width: 358px;
   }
 
+  .hero--about {
+    &__image {
+      bottom: 0;
+    }
+
+    .hero__text {
+      max-width: 50ch;
+    }
+  }
   .features {
     &__item {
       flex-direction: row;
@@ -872,6 +881,12 @@ footer {
     &__text {
       @include fonts.textpreset6semibold;
       max-width: 445px;
+    }
+  }
+
+  .hero--about {
+    .hero__text {
+      max-width: 67ch;
     }
   }
 
