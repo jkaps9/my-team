@@ -291,6 +291,14 @@ header {
     visibility: hidden;
     position: absolute;
     font-size: 1.125rem;
+
+    &__image {
+      position: absolute;
+      bottom: 0;
+      right: -100px;
+
+      display: none;
+    }
   }
 
   .main-nav.visible {
@@ -306,6 +314,10 @@ header {
     visibility: visible;
     z-index: 800;
 
+    .main-nav__image {
+      display: flex;
+      z-index: 801;
+    }
     .nav__list {
       flex-direction: column;
 
