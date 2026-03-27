@@ -120,6 +120,10 @@
   background-color: var(--primary-color-dark);
 }
 
+.bg-very-dark {
+  background-color: var(--primary-color-very-dark);
+}
+
 .bg-accent {
   background-color: var(--accent-color);
 }
@@ -159,6 +163,10 @@ body:has(header .main-nav.visible)::after {
   opacity: 0.6;
   right: 0;
   z-index: 10;
+}
+
+h1 {
+  @include fonts.textpreset4;
 }
 
 h2 {
@@ -313,11 +321,6 @@ header {
     flex-direction: column;
     gap: clamp(var(--space-sm-200), 0.6479rem + 1.5023vw, var(--space-400));
     text-align: center;
-  }
-
-  &__title {
-    @include fonts.textpreset4;
-    font-size: clamp(2.5rem, 1.1796rem + 5.6338vw, 6.25rem);
   }
 
   &__text {
@@ -518,6 +521,7 @@ header {
   }
 
   &__subtitle {
+    @include fonts.textpreset5;
     margin-bottom: 2em;
   }
 
@@ -788,6 +792,9 @@ footer {
   }
 }
 @media (min-width: 48rem) {
+  h1 {
+    @include fonts.textpreset2;
+  }
   header {
     .nav-toggle {
       height: 0;
@@ -969,6 +976,10 @@ footer {
   }
 
   .hero {
+    &__title {
+      @include fonts.textpreset1;
+    }
+
     &__content {
       align-items: flex-start;
       flex-direction: row;
@@ -983,6 +994,9 @@ footer {
   }
 
   .hero--about {
+    .hero__title {
+      @include fonts.textpreset2;
+    }
     .hero__text {
       max-width: 67ch;
     }
