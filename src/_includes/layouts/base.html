@@ -18,8 +18,20 @@
     />
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="skip-link"
+    >
+      Skip to main content
+    </a>
     {% include "partials/site-header.html" %}
-    <main>{% block content %}{% endblock %}</main>
+    <main
+      id="main-content"
+      tab-index="-1"
+      role="main"
+    >
+      {% block content %}{% endblock %}
+    </main>
     {% include "partials/site-footer.html" %}
     <script src="{{ '/main.js' | url }}"></script>
     <!-- {% if title === "Blog" %}

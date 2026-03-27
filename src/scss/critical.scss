@@ -92,6 +92,31 @@
 }
 
 //****** UTILITIES ****** //
+.skip-link {
+  height: 1px;
+  left: -999px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  background: var(--primary-color-very-dark);
+  border-color: var(--highlight-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  height: auto;
+  left: 1rem; /* bring into view on focus */
+  outline-color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  top: 1rem;
+  width: auto;
+  z-index: 1000;
+}
+
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
