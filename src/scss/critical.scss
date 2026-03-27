@@ -510,6 +510,8 @@ header {
 }
 
 .contact {
+  overflow: hidden;
+  position: relative;
   &__title,
   &__subtitle {
     text-align: center;
@@ -604,6 +606,19 @@ header {
   .btn {
     justify-self: start;
     width: fit-content;
+  }
+
+  &__image {
+    position: absolute;
+
+    &--top {
+      display: none;
+    }
+
+    &--bottom {
+      bottom: -125px;
+      right: -100px;
+    }
   }
 }
 
