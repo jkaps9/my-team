@@ -567,6 +567,9 @@ header {
 }
 
 .directors {
+  overflow: hidden;
+  padding-bottom: calc(50px + var(--section-spacing));
+  position: relative;
   &__title {
     margin-bottom: clamp(
       var(--space-xl-600),
@@ -666,6 +669,20 @@ header {
         background: var(--highlight-color);
         transform: rotate(-45deg);
       }
+    }
+  }
+
+  &__image {
+    display: flex;
+    position: absolute;
+    &--top {
+      top: -100px;
+      left: -100px;
+    }
+
+    &--bottom {
+      bottom: 0;
+      right: 0;
     }
   }
 }
