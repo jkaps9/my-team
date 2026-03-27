@@ -11,6 +11,7 @@
       <nav
         class="main-nav"
         aria-label="main"
+        id="primaryNav"
       >
         <div class="main-nav__image">
           {% include "svgs/bg-pattern-about-1-mobile-nav-1.svg" %}
@@ -33,6 +34,8 @@
         type="button"
         class="nav-toggle"
         aria-label="menu toggle button"
+        aria-controls="primaryNav"
+        aria-expanded="false"
       >
         {% include "svgs/icon-hamburger.svg" %}
         {% include "svgs/icon-close.svg" %}
