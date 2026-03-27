@@ -921,13 +921,19 @@ footer {
     .footer {
       &__container {
         align-items: center;
-        gap: 0;
-        grid-template-columns: repeat(3, 1fr);
+        column-gap: var(--space-xxxxl-1000);
+        grid-template-columns: auto auto 1fr;
 
         .footer__socials,
         .footer__copyright {
           grid-column: 3;
           justify-self: end;
+        }
+
+        .footer-nav,
+        .footer__contact {
+          grid-row: 1 / span 2;
+          text-align: start;
         }
       }
     }
